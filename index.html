@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="style.css">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media='all'>
+</head>
+<body onload="myMassacre()">
+
+	<div id="uploader">
+			Upload
+			<br><br>
+			<input type="file" id="myFile" name="files[]" multiple size="50" onchange="myMassacre()">
+	</div>
+	<div id="library">
+		Library<br>
+		<span id="side"></span>
+
+	</div>
+
+	<button type="button" class="btn btn-secondary" onclick="print();" style=" float:right; margin-right: 20px;">Print</button>
+	<div id="buttonie" style="text-align: center; margin-top: 10px; margin-bottom: 20px; margin: 20 auto;"> 
+		
+			<div class="dropdown" style="display: inline-block;"> 
+					Template
+					<select class="selectpicker" id="Ripper">
+						<option>A4</option>
+						<option>A5</option>
+						<option>A3</option>
+					</select>	
+					<button type="button" class="btn btn-secondary" type="submit" style="margin-left: 5px;" onclick="myRipper();">Refresh</button>
+
+			</div>
+	</div>
+
+<div id="Board">
+	<page id="Paint0" size="A4">
+
+		<span class="dragger" id="mydiv">
+			<div class='resizable'>
+				<div class='resizers'>
+				<span id="mydivheader">X</span>
+					<div class='resizer top-left'></div>
+					<div class='resizer top-right'></div>
+					<div class='resizer bottom-left'></div>
+					<div class='resizer bottom-right'></div>
+				</div>
+			</div>
+		</span>
+
+	</page>
+</div>
+
+<div id="buttonie" style="text-align: center; margin-top: 10px; margin-bottom: 40px; margin: 0 auto;"> 
+	<button type="button" class="btn btn-secondary" type="submit" style="margin-top: 15px; text-align: center; margin-bottom: 40px;" onclick="myNinjaAdd();">Add Page</button>
+	<button type="button" class="btn btn-secondary" type="submit" style="margin-top: 15px; text-align: center; margin-bottom: 40px; display: inline-block;" onclick="myNinjaDel();">Delete Page</button>
+</div>
+</body>
+
+
+<script src="myscripts.js"></script>
+<script src="myscript2.js"></script>
+<script src="myscript3.js"></script>
+<script src="myscript4.js"></script>
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</html>
